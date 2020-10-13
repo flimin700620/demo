@@ -15,10 +15,11 @@ public class DemoController {
     @GetMapping("/{id}")
     public String hello(@PathVariable  int id) {
         String sql = "SELECT title FROM tasks WHERE TASK_ID = ?";
-        return (String) jdbcTemplate.queryForObject(
+        String dbString= (String) jdbcTemplate.queryForObject(
                 sql,
                 new Object[]{id},
                 String.class);
+        return "From Spring 2: " + dbString;
 
     }
 }
