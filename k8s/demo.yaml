@@ -32,4 +32,4 @@ spec:
     spec:
       containers:
         - name: demo
-          image: raymondfanglimin/demo:github.run_number
+          image: raymondfanglimin/demo:build-github.run_number
